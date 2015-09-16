@@ -1,0 +1,18 @@
+{
+  "name": "latex-project",
+  "version": "0.0.0",
+  "description": "Project description.",
+  "main": "tex/latex-project.tex",
+  "authors": [
+    "Evan Sosenko <razorx@evansosenko.com>"
+  ],
+  "license": "Copyright 2015 Evan Sosenko",
+  "homepage": "https://github.com/makenew/latex-project",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "tex/components",
+    "build"
+  ]
+}

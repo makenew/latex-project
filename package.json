@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "install": "bower install",
+    "watch": "watchy -w tex/*.tex -- make"
+  },
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "watchy": "^0.6.2"
+  }
+}
