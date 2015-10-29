@@ -59,6 +59,33 @@ and summarized under [Releases].
 [Releases]: https://github.com/makenew/latex-project/releases
 [The Unlicense]: http://unlicense.org/UNLICENSE
 
+### Updating
+
+If you want to pull in future updates from this skeleton,
+you can fetch and merge in changes from this repository.
+
+If this repository is already set as `origin`,
+rename it to `upstream` with
+
+```
+$ git remote rename origin upstream
+```
+
+and then configure your `origin` branch as normal.
+
+Otherwise, add this as a new remote with
+
+```
+$ git remote add upstream https://github.com/makenew/latex-project.git
+```
+
+You can then fetch and merge changes with
+
+```
+$ git fetch upstream
+$ git merge upstream/master
+```
+
 ## Requirements
 
 - A modern [LaTeX] distribution, e.g., [TeX Live],
