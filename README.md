@@ -81,31 +81,31 @@ and summarized under [Releases].
 
 Install any Node and Bower dependencies with
 
-```bash
+```
 $ npm install
 ```
 
 Build to `build/` with
 
-```bash
+```
 $ make
 ```
 
 Clean out temporary and build files with
 
-```bash
+```
 $ make clean
 ```
 
 Lint code with
 
-```bash
+```
 $ make check
 ```
 
 Watch code and rebuild on changes with
 
-```bash
+```
 $ npm run watch
 ```
 
@@ -115,7 +115,7 @@ The [latex-project source](https://github.com/makenew/latex-project)
 is hosted on GitHub.
 To clone the project run
 
-```bash
+```
 $ git clone https://github.com/makenew/latex-project.git
 ```
 
