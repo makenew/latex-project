@@ -104,7 +104,7 @@ $ git merge upstream/master
 [TeX Live]: https://www.tug.org/texlive/
 [XeLaTeX]: http://www.xelatex.org/
 
-## Building
+## Development
 
 Install any Node and Bower dependencies with
 
