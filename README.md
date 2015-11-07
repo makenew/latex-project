@@ -138,13 +138,14 @@ $ npm run watch
 
 ## Source Code
 
-The [latex-project source](https://github.com/makenew/latex-project)
-is hosted on GitHub.
+The [latex-project source] is hosted on GitHub.
 To clone the project run
 
 ```
 $ git clone https://github.com/makenew/latex-project.git
 ```
+
+[latex-project source]: https://github.com/makenew/latex-project
 
 ## Contributing
 
