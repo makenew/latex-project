@@ -1,8 +1,8 @@
 {
-  "name": "latex-project",
+  "name": "makenew-latex-project",
   "version": "0.0.0",
-  "description": "Project description.",
-  "main": "tex/latex-project.tex",
+  "description": "LaTeX project skeleton.",
+  "main": "tex/makenew-latex-project.tex",
   "authors": [
     "Evan Sosenko <razorx@evansosenko.com>"
   ],

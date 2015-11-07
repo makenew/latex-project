@@ -1,0 +1,65 @@
+#!/usr/bin/env sh
+
+set -e
+set -u
+
+find_replace () {
+  git ls-files -z | xargs -0 sed -i "$1"
+}
+
+check_env () {
+  test -d .git || (echo 'This is not a Git repository. Exiting.' && exit 1)
+  for cmd in ${1}; do
+    command -v ${cmd} >/dev/null 2>&1 || \
+      (echo "Could not find '$cmd' which is required to continue." && exit 2)
+  done
+  echo
+  echo 'Ready to bootstrap your new project!'
+  echo
+}
+
+stage_env () {
+  echo
+  git rm -f makenew.sh
+  echo
+  echo 'Staging changes.'
+  git add --all
+  echo
+  echo 'Done!'
+  echo
+}
+
+makenew () {
+  read -p '> Project title: ' mk_title
+  read -p '> Short project description: ' mk_description
+  read -p '> Author name: ' mk_author
+  read -p '> Author email: ' mk_email
+  read -p '> Copyright owner: ' mk_owner
+  read -p '> Copyright year: ' mk_year
+  read -p '> GitHub user or organization name: ' mk_user
+  read -p '> GitHub repository name: ' mk_project
+  read -p '> Primary tex file name (without extension): ' mk_infile
+  read -p '> Primary output file name (without extention): ' mk_outfile
+
+  sed -i -e '8,76d;154,157d' README.md
+  sed -i -e "8i ${mk_description}" README.md
+
+  find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
+  find_replace "s/LaTeX project skeleton\./${mk_description}/g"
+  find_replace "s/Evan Sosenko 2015/${mk_owner} ${mk_year}/g"
+  find_replace "s/Evan Sosenko/${mk_author}/g"
+  find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
+  find_replace "s/makenew\/latex-project/${mk_user}\/${mk_project}/g"
+  find_replace "s/makenew-latex-project/${mk_infile}/g"
+  find_replace "s/Make-New-LaTeX-Project/${mk_outfile}/g"
+
+  git mv tex/makenew-latex-project.tex tex/${mk_infile}.tex
+
+  echo
+  echo 'Replacing boilerplate.'
+}
+
+check_env 'git read sed xargs'
+makenew
+stage_env
+exit

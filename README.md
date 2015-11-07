@@ -5,6 +5,8 @@
 
 ## Description
 
+Bootstrap a new LaTeX project in less than five minutes.
+
 ### Features
 
 * Run build and development tasks from a simple Makefile.
@@ -20,40 +22,21 @@
 [Shields.io]: http://shields.io/
 [Watchy]: https://github.com/caseywebdev/watchy
 
-### Usage
-
-This software can be used freely, see [The Unlicense].
-The copyright text appearing in this software is for
-demonstration purposes only and does not apply to this software.
+### Bootstrapping a New Project
 
 1. Clone this repository or download a [release][Releases].
 
-2. Customize this README.
-   - Set the title.
-   - Replace the Description section.
-   - Update the Source section.
-   - Update the Contributing section.
-   - Customize the badges.
-   - [Choose a license] and update that section.
+2. Run `./makenew.sh` and follow the prompts.
+   This will replace the boilerplate, delete itself,
+   and stage changes for commit.
+   This script assumes the project repository will be hosted on GitHub.
+   For an alternative location, you must update the URLs manually.
 
-3. Update `LICENSE.txt` with your chosen license.
+3. Fill in the README Description section.
 
-4. Customize `bower.json`.
-
-5. Customize the name of the main input file `tex/latex-project.tex`.
-
-6. Customize the build options at the top of the `Makefile`.
-
-You can replace some of the boilerplate with
-
-```
-$ git ls-files -z | xargs -0 sed -i 's/latex-project/your-project/g'
-$ git ls-files -z | xargs -0 sed -i 's/makenew/your-username/g'
-```
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
+4. If [choosing a license][Choose a license] other than the one provided:
+   update `LICENSE.txt`, the README License section,
+   and `bower.json` with your chosen license.
 
 [Choose a license]: http://choosealicense.com/
 [Releases]: https://github.com/makenew/latex-project/releases
@@ -85,6 +68,12 @@ You can then fetch and merge changes with
 $ git fetch upstream
 $ git merge upstream/master
 ```
+
+#### Changelog
+
+Note that `CHANGELOG.md` is just a template for this skeleton.
+The actual changes for this project are documented in the commit history
+and summarized under [Releases].
 
 ## Requirements
 
@@ -138,14 +127,14 @@ $ npm run watch
 
 ## Source Code
 
-The [latex-project source] is hosted on GitHub.
+The [makenew-latex-project source] is hosted on GitHub.
 To clone the project run
 
 ```
 $ git clone https://github.com/makenew/latex-project.git
 ```
 
-[latex-project source]: https://github.com/makenew/latex-project
+[makenew-latex-project source]: https://github.com/makenew/latex-project
 
 ## Contributing
 
@@ -162,7 +151,11 @@ To submit a patch:
 
 ## License
 
-This work is Copyright © yyyy copyright_owner.
+This software can be used freely, see [The Unlicense].
+The copyright text appearing below and elsewhere in this repository
+is for demonstration purposes only and does not apply to this software.
+
+This work is Copyright © 2015 Evan Sosenko.
 
 ## Warranty
 
