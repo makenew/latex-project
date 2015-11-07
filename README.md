@@ -91,7 +91,7 @@ $ git merge upstream/master
 - A modern [LaTeX] distribution, e.g., [TeX Live],
   packaged with [XeLaTeX], [Latexmk], and optionally [ChkTeX].
 - [GNU Make].
-- [Node.js] with npm ([Node Packaged Modules]).
+- [Node.js] with [npm].
   Only required when using Bower for external dependencies
   or for autobuilding on changes.
 
@@ -100,7 +100,7 @@ $ git merge upstream/master
 [LaTeX]: https://www.latex-project.org/
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
 [Node.js]: https://nodejs.org/
-[Node Packaged Modules]: https://npmjs.org/
+[npm]: https://npmjs.org/
 [TeX Live]: https://www.tug.org/texlive/
 [XeLaTeX]: http://www.xelatex.org/
 
