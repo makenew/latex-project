@@ -6,6 +6,9 @@
   "authors": [
     "Evan Sosenko <razorx@evansosenko.com>"
   ],
+  "keywords": [
+    "latex",
+  ],
   "license": "Copyright 2015 Evan Sosenko",
   "homepage": "https://github.com/makenew/latex-project",
   "private": true,
