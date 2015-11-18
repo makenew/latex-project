@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "install": "bower install",
-    "watch": "watchy -w tex/*.tex -- make"
+    "watch": "watchy -w 'tex/*.tex' -- make"
   },
   "devDependencies": {
     "bower": "^1.6.5",
