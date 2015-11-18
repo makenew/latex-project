@@ -14,7 +14,7 @@ clean:
 	@echo Removing $(LATEX_BULD)/
 	@rm -rf $(LATEX_BULD)
 	@echo Cleaning $(LATEX_SRC)/
-	@cd tex; latexmk -c; rm $(LATEX_INPUT).$(LATEX_OUTPUT_EXT)
+	@cd tex; latexmk -c; rm -f $(LATEX_INPUT).$(LATEX_OUTPUT_EXT)
 
 tex:
 	@mkdir -p $(LATEX_BULD)
