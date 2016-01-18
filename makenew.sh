@@ -32,6 +32,7 @@ stage_env () {
 makenew () {
   read -p '> Project title: ' mk_title
   read -p '> Short project description: ' mk_description
+  read -p '> Version number: ' mk_version
   read -p '> Author name: ' mk_author
   read -p '> Author email: ' mk_email
   read -p '> Copyright owner: ' mk_owner
@@ -45,6 +46,7 @@ makenew () {
   sed -i -e "8i ${mk_description}" README.md
   sed -i -e '24d' bower.json
 
+  find_replace "s/0\.0\.0/${mk_version}/g"
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
   find_replace "s/LaTeX project skeleton\./${mk_description}/g"
   find_replace "s/2016 Evan Sosenko/${mk_year} ${mk_owner}/g"
