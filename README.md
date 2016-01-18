@@ -155,7 +155,7 @@ This software can be used freely, see [The Unlicense].
 The copyright text appearing below and elsewhere in this repository
 is for demonstration purposes only and does not apply to this software.
 
-This work is Copyright © 2015 Evan Sosenko.
+This work is Copyright © 2016 Evan Sosenko.
 
 ## Warranty
 
