@@ -5,7 +5,9 @@
 
 ## Description
 
-Bootstrap a new LaTeX project in less than five minutes.
+Bootstrap a new [LaTeX] project in less than five minutes.
+
+[LaTeX]: https://www.latex-project.org/
 
 ### Features
 
