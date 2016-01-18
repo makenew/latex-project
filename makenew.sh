@@ -43,6 +43,7 @@ makenew () {
 
   sed -i -e '8,76d;154,157d' README.md
   sed -i -e "8i ${mk_description}" README.md
+  sed -i -e '24d' bower.json
 
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
   find_replace "s/LaTeX project skeleton\./${mk_description}/g"

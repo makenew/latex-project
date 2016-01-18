@@ -20,6 +20,8 @@
     "**/.*",
     "node_modules",
     "tex/components",
-    "build"
+    "build",
+    "makenew.sh",
+    "package.json"
   ]
 }
