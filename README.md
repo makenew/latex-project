@@ -124,7 +124,7 @@ $ make check
 Watch code and rebuild on changes with
 
 ```
-$ npm run watch
+$ npm start
 ```
 
 ## Source Code
