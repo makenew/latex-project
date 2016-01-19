@@ -5,7 +5,7 @@
     "watch": "watchy -w 'tex/*.tex' -- make"
   },
   "devDependencies": {
-    "bower": "^1.6.5",
+    "bower": "^1.7.2",
     "watchy": "^0.6.5"
   }
 }
