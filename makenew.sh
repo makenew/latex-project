@@ -42,7 +42,7 @@ makenew () {
   read -p '> Primary tex file name (without extension): ' mk_infile
   read -p '> Primary output file name (without extention): ' mk_outfile
 
-  sed -i -e '8,76d;154,157d' README.md
+  sed -i -e '8,78d;155,158d' README.md
   sed -i -e "8i ${mk_description}" README.md
   sed -i -e '24d' bower.json
 
