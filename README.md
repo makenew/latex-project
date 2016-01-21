@@ -130,7 +130,7 @@ $ npm start
 ## Source Code
 
 The [makenew-latex-project source] is hosted on GitHub.
-To clone the project run
+Clone the project with
 
 ```
 $ git clone https://github.com/makenew/latex-project.git
