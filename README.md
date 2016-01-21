@@ -1,6 +1,6 @@
 # LaTeX Project Skeleton
 
-[![Github Releases](https://img.shields.io/github/release/makenew/latex-project.svg)](https://github.com/makenew/latex-project/releases)
+[![Github release](https://img.shields.io/github/release/makenew/latex-project.svg)](https://github.com/makenew/latex-project/releases)
 [![GitHub license](https://img.shields.io/github/license/makenew/latex-project.svg)](./LICENSE.txt)
 
 ## Description
