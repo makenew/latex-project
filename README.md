@@ -26,9 +26,26 @@ Bootstrap a new [LaTeX] project in less than a minute.
 
 ### Bootstrapping a New Project
 
-1. Clone this repository or download a [release][Releases].
+1. Clone the master branch of this repository with
 
-2. Run `./makenew.sh` and follow the prompts.
+   ```
+   $ git clone --single-branch https://github.com/makenew/latex-project.git new-latex-project
+   $ cd new-latex-project
+   ```
+
+   Optionally, reset to the latest [release][Releases] with
+
+   ```
+   $ git reset --hard latex-project-v2.2.1
+   ```
+
+2. Run
+
+   ```
+   $ ./makenew.sh
+   ```
+
+   and follow the prompts.
    This will replace the boilerplate, delete itself,
    and stage changes for commit.
    This script assumes the project repository will be hosted on GitHub.
