@@ -38,7 +38,7 @@ makenew () {
   read -p '> Copyright owner: ' mk_owner
   read -p '> Copyright year: ' mk_year
   read -p '> GitHub user or organization name: ' mk_user
-  read -p '> GitHub repository name: ' mk_project
+  read -p '> GitHub repository name: ' mk_repo
   read -p '> Primary tex file name (without extension): ' mk_infile
   read -p '> Primary output file name (without extention): ' mk_outfile
 
@@ -52,7 +52,7 @@ makenew () {
   find_replace "s/2016 Evan Sosenko/${mk_year} ${mk_owner}/g"
   find_replace "s/Evan Sosenko/${mk_author}/g"
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
-  find_replace "s/makenew\/latex-project/${mk_user}\/${mk_project}/g"
+  find_replace "s/makenew\/latex-project/${mk_user}\/${mk_repo}/g"
   find_replace "s/makenew-latex-project/${mk_infile}/g"
   find_replace "s/Make-New-LaTeX-Project/${mk_outfile}/g"
 
