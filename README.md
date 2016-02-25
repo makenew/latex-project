@@ -1,5 +1,6 @@
 # LaTeX Project Skeleton
 
+[<img src="https://makenew.github.io/makenew.svg" alt="Make New" height="20">](https://makenew.github.io/)
 [![GitHub release](https://img.shields.io/github/release/makenew/latex-project.svg)](https://github.com/makenew/latex-project/releases)
 [![GitHub license](https://img.shields.io/github/license/makenew/latex-project.svg)](./LICENSE.txt)
 

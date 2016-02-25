@@ -42,7 +42,7 @@ makenew () {
   read -p '> Primary tex file name (without extension): ' mk_infile
   read -p '> Primary output file name (without extention): ' mk_outfile
 
-  sed -i -e '8,95d;173,176d' README.md
+  sed -i -e '3d;9,96d;174,177d' README.md
   sed -i -e "8i ${mk_description}" README.md
   sed -i -e '24d' bower.json
 
@@ -57,6 +57,9 @@ makenew () {
   find_replace "s/Make-New-LaTeX-Project/${mk_outfile}/g"
 
   git mv tex/makenew-latex-project.tex tex/${mk_infile}.tex
+
+  mk_attribution='> Built from [makenew/latex-project](https://github.com/makenew/latex-project).'
+  sed -i -e "6i ${mk_attribution}\n" README.md
 
   echo
   echo 'Replacing boilerplate.'
