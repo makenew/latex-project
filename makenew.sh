@@ -4,7 +4,18 @@ set -e
 set -u
 
 find_replace () {
-  git ls-files -z | xargs -0 sed -i "$1"
+  git grep --cached -Il '' | xargs sed -i.sedbak -e "$1"
+  find . -name "*.sedbak" -exec rm {} \;
+}
+
+sed_insert () {
+  sed -i.sedbak -e "$2\\"$'\n'"$3"$'\n' $1
+  rm $1.sedbak
+}
+
+sed_delete () {
+  sed -i.sedbak -e "$2" $1
+  rm $1.sedbak
 }
 
 check_env () {
@@ -42,9 +53,9 @@ makenew () {
   read -p '> Primary tex file name (without extension): ' mk_infile
   read -p '> Primary output file name (without extention): ' mk_outfile
 
-  sed -i -e '3d;9,96d;174,177d' README.md
-  sed -i -e "8i ${mk_description}" README.md
-  sed -i -e '24d' bower.json
+  sed_delete README.md '3d;9,96d;174,177d'
+  sed_insert README.md '8i' "${mk_description}"
+  sed_delete bower.json '24d'
 
   find_replace "s/0\.0\.0/${mk_version}/g"
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
@@ -59,7 +70,7 @@ makenew () {
   git mv tex/makenew-latex-project.tex tex/${mk_infile}.tex
 
   mk_attribution='> Built from [makenew/latex-project](https://github.com/makenew/latex-project).'
-  sed -i -e "6i ${mk_attribution}\n" README.md
+  sed_insert README.md '6i' "${mk_attribution}\n"
 
   echo
   echo 'Replacing boilerplate.'
