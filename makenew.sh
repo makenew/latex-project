@@ -60,7 +60,7 @@ makenew () {
   find_replace "s/0\.0\.0/${mk_version}/g"
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
   find_replace "s/LaTeX project skeleton\./${mk_description}/g"
-  find_replace "s/2016 Evan Sosenko/${mk_year} ${mk_owner}/g"
+  find_replace "s/2017 Evan Sosenko/${mk_year} ${mk_owner}/g"
   find_replace "s/Evan Sosenko/${mk_author}/g"
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
   find_replace "s/makenew\/latex-project/${mk_user}\/${mk_repo}/g"
