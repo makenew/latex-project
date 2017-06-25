@@ -37,7 +37,7 @@ Bootstrap a new [LaTeX] project in less than a minute.
    Optionally, reset to the latest [release][Releases] with
 
    ```
-   $ git reset --hard latex-project-v2.2.1
+   $ git reset --hard latex-project-v2.3.0
    ```
 
 2. Run
