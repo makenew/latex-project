@@ -1,5 +1,7 @@
 # LaTeX Project Skeleton
 
+[![GitHub Actions](https://github.com/makenew/latex-project/workflows/main/badge.svg)](https://github.com/makenew/latex-project/actions)
+
 Package skeleton for a LaTeX project.
 
 ## Description
@@ -11,11 +13,13 @@ Bootstrap a new LaTeX project in in five minutes or less.
 - Build a [LaTeX] project with [Latexmk] and [XeLaTeX].
 - Run development tasks from a simple [Makefile].
 - Load external dependencies with [Bower].
+- Build and store PDF artifacts on [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 
 [Bower]: https://bower.io/
 [EditorConfig]: https://editorconfig.org/
+[GitHub Actions]: https://github.com/features/actions
 [LaTeX]: https://www.latex-project.org/
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
 [Makefile]: https://www.gnu.org/software/make/
