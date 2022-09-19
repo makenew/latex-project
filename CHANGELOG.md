@@ -1,10 +1,10 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
-This change log follows the conventions of
-[keep a CHANGELOG](http://keepachangelog.com/).
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/makenew/libsass-package/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/makenew/latex-project/compare/v0.0.0...HEAD
