@@ -7,6 +7,7 @@
 
 # Build directory
 build/
+tex/*.pdf
 
 # Bower components directory
 tex/components/
