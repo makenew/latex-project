@@ -26,7 +26,7 @@ jobs:
           root_file: tex/makenew-latex-project.tex
           latexmk_use_xelatex: true
       - name: Release
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifactErrorsFailBuild: true
           artifacts: makenew-latex-project.pdf
