@@ -60,7 +60,7 @@ makenew () {
   sed_delete README.md '9,86d'
   sed_insert README.md '9i' 'TODO'
 
-  sed_delete bower.json '24d'
+  sed_delete bower.json '23d'
 
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
   find_replace "s/Package skeleton for a LaTeX project\./${mk_description}/g"
