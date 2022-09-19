@@ -60,6 +60,8 @@ makenew () {
   sed_delete README.md '7,76d'
   sed_insert README.md '7i' 'TODO'
 
+  sed_delete bower.json '24d'
+
   find_replace "s/^  \"version\": \".*\"/  \"version\": \"0.0.0\"/g"
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
   find_replace "s/Package skeleton for a LaTeX project\./${mk_description}/g"
@@ -67,8 +69,6 @@ makenew () {
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
   find_replace "s|makenew/latex-project|${mk_user}/${mk_repo}|g"
   find_replace "s|makenew-latex-project|${mk_name}|g"
-
-  sed_insert README.md '6i' "${mk_attribution}\n"
 
   git mv tex/makenew-latex-project.tex tex/${mk_name}.tex
 
