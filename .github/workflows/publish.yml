@@ -24,10 +24,11 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: tex/makenew-latex-project.tex
+          work_in_root_file_dir: true
           latexmk_use_xelatex: true
       - name: Release
         uses: ncipollo/release-action@v1
         with:
           artifactErrorsFailBuild: true
-          artifacts: makenew-latex-project.pdf
+          artifacts: tex/makenew-latex-project.pdf
           artifactContentType: application/pdf
