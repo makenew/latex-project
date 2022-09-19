@@ -52,6 +52,12 @@ Bootstrap a new LaTeX project in in five minutes or less.
    $ git remote add origin git@github.com:<user>/<new-latex-project>.git
    $ git push -u origin master
    ```
+6. Ensure the GitHub action passes,
+   then publish the initial version of the package with
+   ```
+   $ npm install
+   $ npm ver patch
+   ```
 
 ### Updating from this skeleton
 

@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
+    "ver": "bower version",
+    "postver": "git push --follow-tags",
     "install": "bower install"
   },
   "devDependencies": {
