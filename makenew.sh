@@ -31,6 +31,11 @@ check_env () {
 
 stage_env () {
   echo
+  echo 'Removing origin and tags.'
+  git tag | xargs git tag -d
+  git branch --unset-upstream
+  git remote rm origin
+  echo
   git rm -f makenew.sh
   echo
   echo 'Staging changes.'
@@ -41,36 +46,31 @@ stage_env () {
 }
 
 makenew () {
-  read -p '> Project title: ' mk_title
-  read -p '> Short project description: ' mk_description
-  read -p '> Version number: ' mk_version
-  read -p '> Author name: ' mk_author
-  read -p '> Author email: ' mk_email
-  read -p '> Copyright owner: ' mk_owner
-  read -p '> Copyright year: ' mk_year
-  read -p '> GitHub user or organization name: ' mk_user
-  read -p '> GitHub repository name: ' mk_repo
-  read -p '> Primary tex file name (without extension): ' mk_infile
-  read -p '> Primary output file name (without extention): ' mk_outfile
+  echo 'Answer all prompts.'
+  echo 'There are no defaults.'
+  echo 'Example values are shown in parentheses.'
+  read -p '> Project title (My Project): ' mk_title
+  read -p '> Short project description (Awesome paper.): ' mk_description
+  read -p '> Author name (Linus Torvalds): ' mk_author
+  read -p '> Author email (linus@example.com): ' mk_email
+  read -p '> GitHub user or organization name (my-user): ' mk_user
+  read -p '> GitHub repository name (my-repo): ' mk_repo
+  read -p '> Primary tex file name (my-project): ' mk_name
 
-  sed_delete README.md '3d;9,96d;174,177d'
-  sed_insert README.md '8i' "${mk_description}"
-  sed_delete bower.json '24d'
+  sed_delete README.md '7,76d'
+  sed_insert README.md '7i' 'TODO'
 
-  find_replace "s/0\.0\.0/${mk_version}/g"
+  find_replace "s/^  \"version\": \".*\"/  \"version\": \"0.0.0\"/g"
   find_replace "s/LaTeX Project Skeleton/${mk_title}/g"
-  find_replace "s/LaTeX project skeleton\./${mk_description}/g"
-  find_replace "s/2017 Evan Sosenko/${mk_year} ${mk_owner}/g"
+  find_replace "s/Package skeleton for a LaTeX project\./${mk_description}/g"
   find_replace "s/Evan Sosenko/${mk_author}/g"
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
-  find_replace "s/makenew\/latex-project/${mk_user}\/${mk_repo}/g"
-  find_replace "s/makenew-latex-project/${mk_infile}/g"
-  find_replace "s/Make-New-LaTeX-Project/${mk_outfile}/g"
+  find_replace "s|makenew/latex-project|${mk_user}/${mk_repo}|g"
+  find_replace "s|makenew-latex-project|${mk_name}|g"
 
-  git mv tex/makenew-latex-project.tex tex/${mk_infile}.tex
-
-  mk_attribution='> Built from [makenew/latex-project](https://github.com/makenew/latex-project).'
   sed_insert README.md '6i' "${mk_attribution}\n"
+
+  git mv tex/makenew-latex-project.tex tex/${mk_name}.tex
 
   echo
   echo 'Replacing boilerplate.'
