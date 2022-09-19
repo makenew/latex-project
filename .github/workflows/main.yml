@@ -1,0 +1,41 @@
+---
+name: main
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Check
+        run: make check
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: tex/makenew-latex-project.tex
