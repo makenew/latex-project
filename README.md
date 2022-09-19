@@ -1,99 +1,93 @@
 # LaTeX Project Skeleton
 
-[<img src="https://makenew.github.io/makenew.svg" alt="Make New" height="20">](https://makenew.github.io/)
-[![GitHub release](https://img.shields.io/github/release/makenew/latex-project.svg)](https://github.com/makenew/latex-project/releases)
-[![GitHub license](https://img.shields.io/github/license/makenew/latex-project.svg)](./LICENSE.txt)
+Package skeleton for a LaTeX project.
 
 ## Description
 
-Bootstrap a new [LaTeX] project in less than a minute.
-
-[LaTeX]: https://www.latex-project.org/
+Bootstrap a new LaTeX project in in five minutes or less.
 
 ### Features
 
-* Run build and development tasks from a simple Makefile.
-* Autobuild on changes with [Watchy].
-* [Bower] for external dependencies.
-* [EditorConfig].
-* Badges from [Shields.io].
+- Build a [LaTeX] project with [Latexmk] and [XeLaTeX].
+- Run development tasks from a simple [Makefile].
+- Load external dependencies with [Bower].
+- Watch and rebuild on changes with [nodemon].
+- [Keep a CHANGELOG].
+- Consistent coding with [EditorConfig].
 
-[Bower]: http://bower.io/
-[EditorConfig]: http://editorconfig.org/
-[Grunt]: http://gruntjs.com/
-[npm]: https://www.npmjs.com/
-[Shields.io]: http://shields.io/
-[Watchy]: https://github.com/caseywebdev/watchy
+[Bower]: https://bower.io/
+[EditorConfig]: https://editorconfig.org/
+[LaTeX]: https://www.latex-project.org/
+[Latexmk]: https://www.ctan.org/pkg/latexmk/
+[Makefile]: https://www.gnu.org/software/make/
+[XeLaTeX]: https://ctan.org/pkg/xetex
+[nodemon]: https://nodemon.io/
 
-### Bootstrapping a New Project
+### Bootstrapping a new project
 
-1. Clone the master branch of this repository with
-
+1. Create an empty (**non-initialized**) repository on GitHub.
+2. Clone the master branch of this repository with
    ```
-   $ git clone --single-branch https://github.com/makenew/latex-project.git new-latex-project
-   $ cd new-latex-project
+   $ git clone --single-branch git@github.com:makenew/latex-project.git <new-latex-project>
+   $ cd <new-latex-project>
    ```
-
-   Optionally, reset to the latest [release][Releases] with
-
+   Optionally, reset to the latest version with
    ```
-   $ git reset --hard latex-project-v2.3.0
+   $ git reset --hard <version-tag>
    ```
-
-2. Run
-
+3. Run
    ```
    $ ./makenew.sh
    ```
-
-   and follow the prompts.
    This will replace the boilerplate, delete itself,
+   remove the git remote, remove upstream tags,
    and stage changes for commit.
-   This script assumes the project repository will be hosted on GitHub.
-   For an alternative location, you must update the URLs manually.
+4. Create the required GitHub repository secrets.
+5. Review, commit, and push the changes to GitHub with
+   ```
+   $ git diff --cached
+   $ git commit -m "Replace makenew boilerplate"
+   $ git remote add origin git@github.com:<user>/<new-latex-project>.git
+   $ git push -u origin master
+   ```
 
-3. Fill in the README Description section.
-
-4. If [choosing a license][Choose a license] other than the one provided:
-   update `LICENSE.txt`, the README License section,
-   and `bower.json` with your chosen license.
-
-[Choose a license]: http://choosealicense.com/
-[Releases]: https://github.com/makenew/latex-project/releases
-[The Unlicense]: http://unlicense.org/UNLICENSE
-
-### Updating
+### Updating from this skeleton
 
 If you want to pull in future updates from this skeleton,
 you can fetch and merge in changes from this repository.
 
-If this repository is already set as `origin`,
-rename it to `upstream` with
+Add this as a new remote with
 
 ```
-$ git remote rename origin upstream
-```
-
-and then configure your `origin` branch as normal.
-
-Otherwise, add this as a new remote with
-
-```
-$ git remote add upstream https://github.com/makenew/latex-project.git
+$ git remote add upstream git@github.com:makenew/latex-project.git
 ```
 
 You can then fetch and merge changes with
 
 ```
-$ git fetch upstream
+$ git fetch --no-tags upstream
 $ git merge upstream/master
 ```
 
-#### Changelog
+#### Changelog for this skeleton
 
 Note that `CHANGELOG.md` is just a template for this skeleton.
 The actual changes for this project are documented in the commit history
 and summarized under [Releases].
+
+[Releases]: https://github.com/makenew/latex-project/releases
+
+## Development
+
+### Quickstart
+
+```
+$ git clone https://github.com/makenew/latex-project.git
+$ cd latex-project
+$ npm install
+$ make
+$ npm start
+```
 
 ## Requirements
 
@@ -104,14 +98,14 @@ and summarized under [Releases].
   Only required when using Bower for external dependencies
   or for autobuilding on changes.
 
-[ChkTeX]: http://baruch.ev-en.org/proj/chktex/
+[ChkTeX]: https://www.nongnu.org/chktex/
 [GNU Make]: https://www.gnu.org/software/make/
 [LaTeX]: https://www.latex-project.org/
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
 [Node.js]: https://nodejs.org/
 [npm]: https://npmjs.org/
 [TeX Live]: https://www.tug.org/texlive/
-[XeLaTeX]: http://www.xelatex.org/
+[XeLaTeX]: https://ctan.org/pkg/xetex
 
 ## Development
 
@@ -171,11 +165,7 @@ To submit a patch:
 
 ## License
 
-This software can be used freely, see [The Unlicense].
-The copyright text appearing below and elsewhere in this repository
-is for demonstration purposes only and does not apply to this software.
-
-This work is Copyright © 2017 Evan Sosenko.
+This LaTeX project is licensed under the MIT license.
 
 ## Warranty
 
