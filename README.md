@@ -11,7 +11,6 @@ Bootstrap a new LaTeX project in in five minutes or less.
 - Build a [LaTeX] project with [Latexmk] and [XeLaTeX].
 - Run development tasks from a simple [Makefile].
 - Load external dependencies with [Bower].
-- Watch and rebuild on changes with [nodemon].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 
@@ -21,7 +20,6 @@ Bootstrap a new LaTeX project in in five minutes or less.
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
 [Makefile]: https://www.gnu.org/software/make/
 [XeLaTeX]: https://ctan.org/pkg/xetex
-[nodemon]: https://nodemon.io/
 
 ### Bootstrapping a new project
 
@@ -86,7 +84,6 @@ $ git clone https://github.com/makenew/latex-project.git
 $ cd latex-project
 $ npm install
 $ make
-$ npm start
 ```
 
 ## Requirements
@@ -95,8 +92,7 @@ $ npm start
   packaged with [XeLaTeX], [Latexmk], and optionally [ChkTeX].
 - [GNU Make].
 - [Node.js] with [npm].
-  Only required when using Bower for external dependencies
-  or for autobuilding on changes.
+  Only required when using Bower for external dependencies.
 
 [ChkTeX]: https://www.nongnu.org/chktex/
 [GNU Make]: https://www.gnu.org/software/make/
