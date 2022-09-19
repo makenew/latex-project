@@ -27,8 +27,7 @@ jobs:
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
       - name: Release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          artifactErrorsFailBuild: true
-          artifacts: tex/makenew-latex-project.pdf
-          artifactContentType: application/pdf
+          fail_on_unmatched_files: true
+          files: tex/*.pdf
