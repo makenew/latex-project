@@ -9,7 +9,7 @@
   "keywords": [
     "latex"
   ],
-  "license": "Copyright 2017 Evan Sosenko",
+  "license": "MIT",
   "homepage": "https://github.com/makenew/latex-project",
   "repository": {
     "type": "git",
