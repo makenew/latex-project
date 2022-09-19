@@ -24,7 +24,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: tex/makenew-latex-project.tex
+          latexmk_use_xelatex: true
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          path: tex/*.pdf
+          path: makenew-latex-project.pdf
