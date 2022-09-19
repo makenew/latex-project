@@ -1,6 +1,6 @@
 {
   "name": "makenew-latex-project",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "description": "Package skeleton for a LaTeX project.",
   "main": "tex/makenew-latex-project.tex",
   "authors": [
