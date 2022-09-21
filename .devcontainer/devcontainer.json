@@ -11,6 +11,9 @@
       "James-Yu.latex-workshop",
       "EditorConfig.EditorConfig"
     ],
+    "settings": {
+      "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+    },
     "postCreateCommand": "npm install",
     "remoteUser": "node"
   }
