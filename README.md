@@ -23,6 +23,7 @@ Bootstrap a new LaTeX project in in five minutes or less.
 [EditorConfig]: https://editorconfig.org/
 [GitHub Actions]: https://github.com/features/actions
 [GitHub Codespaces]: https://github.com/features/codespaces
+[Keep a CHANGELOG]: https://keepachangelog.com/
 [LaTeX]: https://www.latex-project.org/
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
 [LaTeX Workshop]: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop

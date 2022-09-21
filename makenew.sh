@@ -57,7 +57,7 @@ makenew () {
   read -p '> GitHub repository name (my-repo): ' mk_repo
   read -p '> Primary tex file name (my-project): ' mk_name
 
-  sed_delete README.md '9,91d'
+  sed_delete README.md '9,92d'
   sed_insert README.md '9i' 'TODO'
 
   sed_delete bower.json '23d'
