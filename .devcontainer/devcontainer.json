@@ -1,0 +1,16 @@
+{
+    "name": "LaTeX",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "VARIANT": "16"
+      }
+    },
+    "extensions": [
+      "ms-vsliveshare.vsliveshare",
+      "James-Yu.latex-workshop",
+      "EditorConfig.EditorConfig"
+    ],
+    "postCreateCommand": "npm install",
+    "remoteUser": "node"
+  }
