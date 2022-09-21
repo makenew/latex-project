@@ -14,15 +14,20 @@ Bootstrap a new LaTeX project in in five minutes or less.
 - Run development tasks from a simple [Makefile].
 - Load external dependencies with [Bower].
 - Build and store PDF artifacts on [GitHub Actions].
+- Develop in the cloud with [GitHub Codespaces]
+  using [LaTeX Workshop] in [Visual Studio Code].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 
 [Bower]: https://bower.io/
 [EditorConfig]: https://editorconfig.org/
 [GitHub Actions]: https://github.com/features/actions
+[GitHub Codespaces]: https://github.com/features/codespaces
 [LaTeX]: https://www.latex-project.org/
 [Latexmk]: https://www.ctan.org/pkg/latexmk/
+[LaTeX Workshop]: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
 [Makefile]: https://www.gnu.org/software/make/
+[Visual Studio Code]: https://code.visualstudio.com/
 [XeLaTeX]: https://ctan.org/pkg/xetex
 
 ### Bootstrapping a new project
