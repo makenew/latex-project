@@ -28,4 +28,4 @@ tex:
 		cp -p $(LATEX_INPUT).$(LATEX_OUTPUT_EXT) \
 			../$(LATEX_BULD)/$(LATEX_OUTPUT).$(LATEX_OUTPUT_EXT)
 
-.PHONY: build tex
+.PHONY: check clean tex
