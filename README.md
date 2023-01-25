@@ -153,7 +153,7 @@ which will create a GitHub Release with the generated PDFs.
 - Directly from [GitHub Releases].
 - Using Git with
   ```
-  $ git tag 1.2.3 -m v1.2.3
+  $ git tag --sign 1.2.3 -m v1.2.3
   $ git push --tags
   ```
 - Using Bower with
@@ -162,6 +162,14 @@ which will create a GitHub Release with the generated PDFs.
   ```
 
 [GitHub Releases]: https://github.com/makenew/latex-project/releases/new
+
+## GitHub Actions
+
+_GitHub Actions should already be configured: this section is for reference only._
+
+The following repository secrets must be set on [GitHub Actions]:
+
+- `GH_TOKEN`: A personal access token for the user.
 
 ## Source Code
 
