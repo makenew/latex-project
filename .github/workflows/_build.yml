@@ -1,0 +1,32 @@
+---
+name: _build
+
+on:
+  workflow_call:
+    outputs:
+      artifact_name:
+        description: The artifact name.
+        value: build-${{ github.sha }}
+
+jobs:
+  build:
+    name: Output
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Build
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: tex/makenew-latex-project.tex
+          work_in_root_file_dir: true
+          latexmk_use_xelatex: true
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-${{ github.sha }}
+          if-no-files-found: error
+          path: tex/*.pdf
