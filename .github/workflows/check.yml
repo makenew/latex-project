@@ -1,5 +1,5 @@
 ---
-name: check
+name: Check
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
           root_file: tex/makenew-latex-project.tex
           work_in_root_file_dir: true
           latexmk_use_xelatex: true
-      - name: Upload artifacts
+      - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           path: tex/*.pdf
