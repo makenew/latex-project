@@ -1,0 +1,21 @@
+---
+name: Setup
+description: Setup Node.js and install dependencies.
+
+inputs:
+  node_version:
+    description: The Node.js version.
+    required: false
+    default: '18'
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        cache: npm
+        node-version: ${{ inputs.node_version }}
+    - name: Install dependencies
+      shell: bash
+      run: npm ci
