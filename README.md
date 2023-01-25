@@ -145,11 +145,23 @@ Lint code with
 $ make check
 ```
 
-Watch code and rebuild on changes with
+### Publishing
 
-```
-$ npm start
-```
+Simply create a new tag to trigger a GitHub action
+which will create a GitHub Release with the generated PDFs.
+
+- Directly from [GitHub Releases].
+- Using Git with
+  ```
+  $ git tag 1.2.3 -m v1.2.3
+  $ git push --tags
+  ```
+- Using Bower with
+  ```
+  $ npm run ver 1.2.3
+  ```
+
+[GitHub Releases]: https://github.com/makenew/latex-project/releases/new
 
 ## Source Code
 
