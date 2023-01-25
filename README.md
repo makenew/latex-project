@@ -153,7 +153,7 @@ which will create a GitHub Release with the generated PDFs.
 - Directly from [GitHub Releases].
 - Using Git with
   ```
-  $ git tag --sign 1.2.3 -m v1.2.3
+  $ git tag --sign v1.2.3 -m v1.2.3
   $ git push --tags
   ```
 - Using Bower with
