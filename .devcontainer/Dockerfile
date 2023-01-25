@@ -1,4 +1,4 @@
-ARG VARIANT="16"
+ARG VARIANT="18"
 
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
@@ -15,4 +15,3 @@ RUN mkdir -p .config/git \
  && echo ".vscode/*" >> .config/git/ignore \
  && echo "*.code-workspace" >> .config/git/ignore \
  && echo ".history/" >> .config/git/ignore
- 
