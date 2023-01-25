@@ -13,7 +13,7 @@ Bootstrap a new LaTeX project in in five minutes or less.
 - Build a [LaTeX] project with [Latexmk] and [XeLaTeX].
 - Run development tasks from a simple [Makefile].
 - Load external dependencies with [Bower].
-- Build and store PDF artifacts on [GitHub Actions].
+- Build and release PDF artifacts with [GitHub Actions].
 - Develop in the cloud with [GitHub Codespaces]
   using [LaTeX Workshop] in [Visual Studio Code].
 - [Keep a CHANGELOG].
