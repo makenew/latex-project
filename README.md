@@ -1,6 +1,6 @@
 # LaTeX Project Skeleton
 
-[![GitHub Actions](https://github.com/makenew/latex-project/workflows/check/badge.svg)](https://github.com/makenew/latex-project/actions)
+[![GitHub Actions](https://github.com/makenew/latex-project/actions/workflows/check.yml/badge.svg)](https://github.com/makenew/latex-project/actions/workflows/check.yml)
 
 Package skeleton for a LaTeX project.
 
